@@ -1,8 +1,12 @@
 # Reeduct
 
 Reeduct is a tool for retrieving and saving Instagram profile information.
+![capture_240320_013050](https://github.com/ERROR1099/REEDUCT/assets/117563608/057cdde4-17d4-4a1c-876f-e9011a78c25d)
 
-## Features
+![capture_240320_013134](https://github.com/ERROR1099/REEDUCT/assets/117563608/4e8dd16a-ca48-404e-96c1-4c533efcd8f3)
+
+
+# Features
 
     Retrieve Instagram profile information such as username, full name, bio, post count, followers count, following count, external URL, profile URL, profile picture URL, privacy status, and verification status.
     Save profile information to a text file.
