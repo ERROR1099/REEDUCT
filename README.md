@@ -30,7 +30,7 @@ Reeduct is a Python tool for retrieving and saving Instagram profile information
 
 Run the script reeduct.py and follow the prompts to enter an Instagram username. The tool will fetch the profile information and prompt whether to save it to a text file.
 
- `python reeduct.py`.
+ For Termux:`python reeduct.py`   For Linux:`python3 reeduct.py`
 
  ## Enjoy !
 
