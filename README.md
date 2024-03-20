@@ -9,15 +9,15 @@ Reeduct is a tool for retrieving and saving Instagram profile information.
 
 ## Installation
 
-  1.Clone the repository: `git clone https://github.com/ERROR1099/REEDUCT`
+  1.Clone the repository: `https://github.com/ERROR1099/REEDUCT.git`.
 
-  2.Install the required dependencies: `pip install -r requirements.txt`
+  2.Install the required dependencies: `pip install -r requirements.txt`.
 
 ## Usage
 
 Run the script reeduct.py and follow the prompts to enter an Instagram username. The tool will fetch the profile information and prompt whether to save it to a text file.
 
- `python reeduct.py`
+ `python reeduct.py`.
 
  ## Enjoy !
 
