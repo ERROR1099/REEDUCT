@@ -1,0 +1,2 @@
+instaloader==2.8.1
+colorama==0.4.4
