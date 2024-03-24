@@ -44,6 +44,6 @@ Contributions are welcome! If you'd like to contribute to Reeduct, please fork t
 
  # Author
  
-This tool is written by @ERROR1099.
+This tool is developed by @ERROR1099.
  
 
