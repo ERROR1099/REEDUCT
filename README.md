@@ -20,7 +20,7 @@ Reeduct is a Python tool for retrieving and saving Instagram profile information
 
 # Installation
 
-  1.Clone the repository: `https://github.com/ERROR1099/REEDUCT.git`
+  1.Clone the repository: `git clone https://github.com/ERROR1099/REEDUCT.git`
   
   2.Project directory: `cd REEDUCT`
   
