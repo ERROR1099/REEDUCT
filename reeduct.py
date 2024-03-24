@@ -2,6 +2,45 @@ import os
 import instaloader
 from colorama import Fore, Style
 
+def download_posts(username):
+    # Create an instance of Instaloader
+    L = instaloader.Instaloader()
+
+    try:
+        # Retrieve profile metadata
+        profile = instaloader.Profile.from_username(L.context, username)
+
+        # Create folder with profile name if not exists
+        profile_folder = os.path.join("profile_data", profile.username)
+        os.makedirs(profile_folder, exist_ok=True)
+
+        # Initialize a counter for downloaded posts
+        downloaded_count = 0
+
+        # Iterate over the profile's posts and download them
+        for post in profile.get_posts():
+            L.download_post(post, target=profile_folder)
+            downloaded_count += 1
+
+            # Display post details
+            print(Fore.RED + "\nPost Details:")
+            print(Fore.YELLOW + f"Caption: {post.caption}")
+            print(f"Likes: {post.likes}")
+            print(f"Comments: {post.comments}")
+            print(Style.RESET_ALL)  # Reset color
+
+            # Leave a space between post details and filenames
+            print()
+
+        # Display success message with the number of posts downloaded
+        print(Fore.GREEN + "\nPosts downloaded successfully.")
+        print(f"Total posts downloaded: {downloaded_count}")
+        print(Style.RESET_ALL)  # Reset color
+
+    except Exception as e:
+        print(Fore.RED + "\nAn error occurred:", e)
+        print(Style.RESET_ALL)  # Reset color
+
 def get_profile_info(username):
     L = instaloader.Instaloader()
     try:
@@ -43,6 +82,7 @@ def get_profile_info(username):
         print(Style.RESET_ALL)  # Reset color
 
 if __name__ == "__main__":
+    # Print banner
     print(Fore.RED + "  _____               _            _   ")
     print(" |  __ \             | |          | |  ")
     print(" | |__) |___  ___  __| |_   _  ___| |_ ")
@@ -50,11 +90,21 @@ if __name__ == "__main__":
     print(" | | \ \  __/  __/ (_| | |_| | (__| |_ ")
     print(" |_|  \_\___|\___|\__,_|\__,_|\___|\__|")
     print(Style.RESET_ALL)  # Reset color
-    
-    print("This tool is written by @ERROR1099\n")
 
     while True:
-        username = input("Enter Instagram username (or 'exit' to quit): ")
-        if username.lower() == 'exit':
+        print(Fore.YELLOW + "1. Download Instagram Posts")
+        print("2. Get Instagram Profile Information")
+        print("3. Exit")
+
+        choice = input("Enter your choice: ")
+        if choice == '1':
+            username = input("Enter Instagram username to download posts: ")
+            download_posts(username)
+        elif choice == '2':
+            username = input("Enter Instagram username to get profile information: ")
+            get_profile_info(username)
+        elif choice == '3':
+            print("Exiting the program...")
             break
-        get_profile_info(username)
+        else:
+             print("Invalid choice. Please enter a valid option (1/2/3).")
